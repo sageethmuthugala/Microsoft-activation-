@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PowerShell Instruction Guide</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Creator Banner */
+    .creator-banner {
+      background: linear-gradient(90deg, #ff416c, #ff4b2b, #ff6a00, #f9d423);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+      text-align: center;
+      padding: 25px;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      border-bottom: 4px solid rgba(255,255,255,0.6);
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2a5298;
+      margin-bottom: 20px;
+    }
+
+    /* Warning */
+    .warning {
+      background: #ffe0e0;
+      color: #a00;
+      border: 2px solid #f44336;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Steps */
+    .steps { margin-top: 20px; }
+    .step {
+      background: #f4f4f9;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .step img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 2px solid #ddd;
+    }
+    .step-text { flex: 1; }
+
+    code {
+      display: block;
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 15px;
+    }
+
+    /* Copy Button */
+    button.copy-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #0078d7;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button.copy-btn:hover {
+      background: #005a9e;
+      transform: scale(1.05);
+    }
+
+    /* Download Button */
+    .download-link {
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+      padding: 15px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      border-radius: 50px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      transition: all 0.3s;
+    }
+    .download-link:hover {
+      transform: scale(1.07);
+      background: linear-gradient(135deg, #185a9d, #43cea2);
+    }
+
+    /* Thank You */
+    .thank-you {
+      margin-top: 40px;
+      padding: 25px;
+      text-align: center;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* Video Styling */
+    iframe {
+      display: block;
+      margin: 30px auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔥 Creator Banner -->
+  <div class="creator-banner">
+    ✨ Created by Sageeth Muthugala ✨
+  </div>
+
+  <div class="container">
+    <h1>⚡ PowerShell Command Guide ⚡</h1>
+
+    <div class="warning">
+      ⚠️ <span>Warning: This command downloads and executes a script from the internet. 
+      Run it only if you <u>trust the source</u>.</span>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <img src="https://img.icons8.com/color/96/windows-10.png" alt="Windows">
+        <div class="step-text">
+          <b>Step 1 🖥️:</b> Press <b>Win + R</b>, type <b>powershell</b>, and hit <b>Enter</b>.
+        </div>
+      </div>
+
+      <div class="step">
+        <img src="https://img.icons8.com/color/96/admin-settings-male.png" alt="Admin">
+        <div class="step-text">
+          <b>Step 2 🔑:</b> Run PowerShell as Administrator (right-click → <b>Run as Admin</b>).
+        </div>
+      </div>
+
+      <div class="step">
+        <img src="https://img.icons8.com/color/96/copy.png" alt="Copy">
+        <div class="step-text">
+          <b>Step 3 📋:</b> Copy the command below:
+          <code id="ps-command">irm https://get.activated.win | iex</code>
+          <button class="copy-btn" onclick="copyCommand()">📋 Copy Command</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <img src="https://img.icons8.com/color/96/paste.png" alt="Paste">
+        <div class="step-text">
+          <b>Step 4 ⌨️:</b> Paste it into PowerShell (Ctrl+V or right-click).
+        </div>
+      </div>
+
+      <div class="step">
+        <img src="https://img.icons8.com/color/96/enter-key.png" alt="Enter Key">
+        <div class="step-text">
+          <b>Step 5 🚀:</b> Press <b>Enter</b> to run the command.
+        </div>
+      </div>
+
+      <div class="step">
+        <img src="https://img.icons8.com/color/96/ok.png" alt="OK">
+        <div class="step-text">
+          <b>Step 6 ✅:</b> Follow any on-screen instructions until the process is complete.
+        </div>
+      </div>
+
+      <div class="step">
+        <img src="https://img.icons8.com/color/96/shutdown.png" alt="Close">
+        <div class="step-text">
+          <b>Step 7 🔒:</b> Close PowerShell once done.
+        </div>
+      </div>
+    </div>
+
+    <!-- 🎥 Microsoft 365 Video Tutorial -->
+    <h1>📽 How to Download & Install Microsoft 365</h1>
+    <iframe width="720" height="405" 
+      src="https://www.youtube.com/embed/QBwA6yGETRc" 
+      title="How to Download and Install Microsoft Office 365" 
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+
+    <!-- Download Microsoft 365 -->
+    <a href="https://www.microsoft.com/en-us/microsoft-365/download-office" target="_blank" class="download-link">
+      ⬇️ Download Microsoft 365 for Free ⬇️
+    </a>
+
+    <div class="thank-you">
+      🎉 Thank You for Following the Instructions! 🎉
+    </div>
+  </div>
+
+  <script>
+    function copyCommand() {
+      const command = document.getElementById("ps-command").innerText;
+      navigator.clipboard.writeText(command).then(() => {
+        alert("✅ Command copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>
